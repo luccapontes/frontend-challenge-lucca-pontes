@@ -1,0 +1,23 @@
+<ion-content scrollX="false" scrollY="false">
+  <h3>Hello to <br> Get the Holidays</h3>
+
+  <h6>Your app to find the holidays around the world!</h6>
+
+  <form [formGroup]="userForm">
+    <ion-item lines="none">
+      <ion-icon name="mail-outline"></ion-icon>
+      <ion-input formControlName="email" type="mail" placeholder="email"></ion-input>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input formControlName="password" type="{{ tipocampo }}" type="password" placeholder="password"></ion-input>
+      <ion-icon class="lock-icon" (click)="changeView(true)" *ngIf="tipocampo == 'password'" name="eye-outline"></ion-icon>
+      <ion-icon class="lock-icon" (click)="changeView(false)" *ngIf="tipocampo == 'text'" name="eye-off-outline"></ion-icon>
+    </ion-item>
+
+  </form>
+
+  <ion-button (click)="submit()">Login</ion-button>
+
+</ion-content>
