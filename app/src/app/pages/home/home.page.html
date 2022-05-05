@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="'Home'" [voltar]="false"></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="home">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let countries of list" lines="none">
+      <div>
+        <ion-label>{{countries.name}}</ion-label>
+        <p>{{countries.code}}</p>
+      </div>
+      <ion-icon (click)="goToDetails(countries.code, 2022)" name="caret-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
