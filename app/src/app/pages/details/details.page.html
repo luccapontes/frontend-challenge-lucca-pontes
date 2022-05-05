@@ -1,9 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="'Details'"></app-header>
 
 <ion-content>
+
+    <ion-list>
+        <div class="item" *ngFor="let item of holidays" lines="none">
+            <div class="first-box">
+                <ion-label>Local name: {{item.local_name}}</ion-label>
+                <p>Name: {{item.name}}</p>
+                <p>Date: {{item.date}}</p>
+                <p>Country Code: {{item.country_code}}</p>
+            </div>
+        </div>
+    </ion-list>
 
 </ion-content>
