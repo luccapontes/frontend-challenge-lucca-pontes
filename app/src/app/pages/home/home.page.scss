@@ -1,7 +1,7 @@
 ion-item{
     --padding-start: 15px;
     --padding-end: 0;
-    --background: transparent;
+    --background: #18181B;
     border: 2px solid #6938ca;
     border-radius: 16px;
     margin-top: 6%;
@@ -32,4 +32,8 @@ ion-item{
     ion-icon{
         margin-left: auto;
     }
+}
+
+ion-list{
+    background: #18181B;
 }

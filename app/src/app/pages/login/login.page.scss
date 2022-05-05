@@ -55,9 +55,10 @@ ion-button{
     display: flex;
     width: 85%;
     border-radius: 16px;
+    --border-radius: 16px;
     margin-top: 10vh;
     border: 2px solid #6938ca;
     --color: white;
-    --background: transparent;
+    --background: #18181B;
     --background-activated: #6938ca;
 }
