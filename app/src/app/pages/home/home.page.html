@@ -3,12 +3,12 @@
 <ion-content class="home">
 
   <ion-list>
-    <ion-item *ngFor="let countries of list" lines="none">
+    <ion-item (click)="goToDetails(countries.code, 2022)" *ngFor="let countries of list" lines="none">
       <div>
         <ion-label>{{countries.name}}</ion-label>
         <p>{{countries.code}}</p>
       </div>
-      <ion-icon (click)="goToDetails(countries.code, 2022)" name="caret-forward-outline"></ion-icon>
+      <ion-icon name="caret-forward-outline"></ion-icon>
     </ion-item>
   </ion-list>
 
